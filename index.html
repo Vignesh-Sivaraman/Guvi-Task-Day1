@@ -7,8 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Vignesh Siva Blog</title>
     <link rel="icon" href="favicon.ico">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 </head>
 <body>
   <!-- nav starts -->
@@ -30,59 +30,39 @@
     <!-- column 1 -->
     <div class="col">
       <div class="post">
-        <img class="post-img" src="./img/http.jpg" alt="">
+        <img class="post-img" src="http.jpg" alt="">
         <div class="post-info">
-          <h2>HTTP1.1 vs HTTP2</h2>
+          <h2> Diff b/w Document & window objects</h2>
           <div class="user-info">
-            <img src="./img/avatar.png" alt="">
+            <img src="avatar.png" alt="">
             <span>Vignesh,</span>
             <span>June 15, 2022 </span>
             <span>#Task1</span>
           </div>
-        <p><strong>HTTP1.1:</strong></p>
-          <p>HTTP1.1 was introduced in 1997. It supported connection reuse where there can be multiple requests and responses. It allowed to clients to request several resources from several servers at the same time which lead to some feasibility issues.</p>
-          <!-- Developed by Timothy Berners-Lee in 1989 as a communication standard for the World Wide Web, HTTP is a top-level application protocol that exchanges information between a client computer and a local or remote web server. In this process, a client sends a text-based request to a server by calling a method like GET or POST. In response, the server sends a resource like an HTML page back to the client. -->
-          <!-- HTTP1.1 was released in 1997 and HTTP2 was released in 2015. From a technical point of view, one of the most significant features that distinguishes HTTP/1.1 and HTTP/2 is the binary framing layer, which can be thought of as a part of the application layer in the internet protocol stack. -->
-          <!-- From a technical point of view, one of the most significant features that distinguishes HTTP/1.1 and HTTP/2 is the binary framing layer, which can be thought of as a part of the application layer in the internet protocol stack. -->
-        <p>It indroduced warning headers to carry additional info about the status of message and also can define upto 24 status codes.</p>
-        <p>It used digest and NTLM authentication.</p>
-        <p>It provided faster delivery of web pages and reduces web traffic as compared to HTTP/1.0 .</p>
-        <p><strong>HTTP2:</strong></p>
-        <p>HTTP2 was introduced in 2015. It used multiplexing through streams which can be prioritized, can have dependencies and individual flow control. It also provides a feature called server push that allows the server to send data that the client will need but has not yet requested.</p>
-        <p>Underlying semantics of HTTP such as headers, status codes are same as in the previous version.</p>
-        <p>It is has better security while authentication compared to the previous versio and uses new TLS features to do the same.</p>
-        <p>HTTP/2 utilizes multiplexing and server push to effectively reduce the page load time by a greater margin along with being less sensitive to network delays.</p>
+        <div><strong>Document objects</strong></div>
+        <br>
+        <ol>
+          <li>Document object represents the loaded web page browser. By using document object, We can access the element in HTML page.</li>
+          <li>The document object can be accessed by using "document.method_name" and "document.property_name".</li>
+          <li>It is the object of window property and loaded inside the window.</li>
+          <li>the document is part of both browser object model(BOM) and Document object model(DOM).</li>
+          <li>All the tags, elements with attributes in HTML are part of the document.</li>
+          <li><u>Example: </u>document.title: will return the title of the document </li>
+        </ol>
+        <Div><strong>Window objects</strong></Div>
+        <ol>
+          <li>It represents a browser window or frame that displays the contents of web page.</li>
+          <li>The window object can be accessed by using "window.property_name".</li>
+          <li>It is the very first object loaded in the browser.</li>
+          <li>It is the object of the browser and only part of DOM not BOM.</li>
+          <li>Global objects, functions, and variables of Javascript are members of window object.</li>
+          <li><u>Example: </u>window.inner height: will return the content area height of the browser.</li>
+        </ol>
         </div>
       </div>
     </div>
     <!-- column 2 -->
-    <div class="col">
-      <div class="post">
-        <img class="post-img" src="./img/js.jpg" alt="">
-        <div class="post-info">
-          <h2>Javascript objects and its internal representation</h2>
-          <div class="user-info">
-            <img src="./img/avatar.png" alt="">
-            <span>Vignesh,</span>
-            <span>June 15, 2022 </span>
-            <span>#Task1</span>
-          </div>
-        <p>
-          Objects are a form of data type and forms building blocks of javascript.
-          objects are not same as primitive data types (Number, string, Boolean,null..).
-          objects contain a combination of primitive data types as well as reference data types and has properties associated with it.
-          objects are denoted by curly braces {}.</p>
-        <p>objects basically created with key and value pairs.</p>
-        <p>Objects can be used with call by reference for better memory efficiency.</p>
-        <p><strong>Example of object:</strong></p>
-        <p>let bike = {name: 'Ninja 300', maker:'Kawasaki', engine:'300cc'}; where "name,maker,engine" represent keys and Ninja 300,Kawasaki,300cc represent the corresponding values. </p>
-        <p>There can be array of objects. The value of a particular key can be accessed by uisng dot(.) operator; bike.name (returns 'Ninja 300') .</p>
-        <p>We can also use arrays within objects (let bike = engine:[name: 'Ninja 300', maker:'Kawasaki','300cc', '200cc']) .</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
+
 
   <!-- main ends -->
   <!-- footer starts -->
@@ -93,7 +73,7 @@
   </footer>
   <!-- footer ends -->
 
-  <script src="js/sript.js"></script>
+  <script src="script.js"></script>
 
 </body>
 
